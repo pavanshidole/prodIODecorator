@@ -1,0 +1,25 @@
+
+<div *ngIf="getProdArray.length > 0; else noProd">
+    <div
+    *ngFor="let prod of getProdArray"
+    class="card mb-md-5">
+        <div 
+        [ngClass]="{
+            'bg-success':prod.pCatg.toLowerCase().includes('product'),
+            'bg-warning':prod.pCatg.toLowerCase().includes('catlog')
+        }"
+        class="card-header text-center">
+            <h3>{{prod.pName}}</h3>
+        </div>
+        <div class="card-body">
+            <p>{{prod.pdescription}}</p>
+        </div>
+        <div class="card-footer text-center">
+            <h3>{{prod.pCatg}}</h3>
+        </div>
+    </div>
+</div>
+
+<ng-template #noProd>
+    <p class="bg-dark p-2 text-white text-capitalize text-center">in produlist product is not available !!!</p>
+</ng-template>

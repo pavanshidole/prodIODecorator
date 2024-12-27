@@ -1,0 +1,17 @@
+<div class="card mb-md-5 bg-info text-white text-capitalize">
+    <div class="card-body">
+        <div class="form-group">
+            <label for="pName">productName</label>
+            <input type="text" #pName id="pName" (input)="validInput()" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="pdescription">product Description</label>
+            <textarea type="text" #pdescription  (input)="validInput()" id="pdescription" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="pCatg">product category</label>
+            <input type="text" #pCatg  (input)="validInput()" id="pCatg" class="form-control">
+        </div>
+        <button (click)="prodAdd()" class="btn btn-sm btn-block btn-outline-dark text-white">Add Prod</button>
+    </div>
+</div>
